@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews - TorqueHub</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Read customer reviews and testimonials about their experience with TorqueHub.">
+</head>
+<body>
+  <main class="page-content">
+    <div class="container">
+      <h1>Customer Reviews</h1>
+      <p>See what our customers are saying about their experience with TorqueHub</p>
+
+      <!-- Overall Rating Section -->
+      <section class="section">
+        <div class="rating-summary card" style="padding: 2rem; text-align: center;">
+          <div style="font-size: 4rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">4.8</div>
+          <div class="rating-stars" style="color: var(--color-accent); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+          <p>Based on 1,248 reviews</p>
+        </div>
+      </section>
+
+      <!-- Rating Breakdown -->
+      <section class="section">
+        <h2>Rating Breakdown</h2>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <div class="card" style="padding: 2rem;">
+            <h3>Buying Experience</h3>
+            <div class="rating-bars">
+              <div class="rating-bar">
+                <span>5 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 75%;"></div>
+                </div>
+                <span>75%</span>
+              </div>
+              <div class="rating-bar">
+                <span>4 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 15%;"></div>
+                </div>
+                <span>15%</span>
+              </div>
+              <div class="rating-bar">
+                <span>3 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 7%;"></div>
+                </div>
+                <span>7%</span>
+              </div>
+              <div class="rating-bar">
+                <span>2 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 2%;"></div>
+                </div>
+                <span>2%</span>
+              </div>
+              <div class="rating-bar">
+                <span>1 star</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 1%;"></div>
+                </div>
+                <span>1%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 2rem;">
+            <h3>Selling Experience</h3>
+            <div class="rating-bars">
+              <div class="rating-bar">
+                <span>5 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 80%;"></div>
+                </div>
+                <span>80%</span>
+              </div>
+              <div class="rating-bar">
+                <span>4 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 12%;"></div>
+                </div>
+                <span>12%</span>
+              </div>
+              <div class="rating-bar">
+                <span>3 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 5%;"></div>
+                </div>
+                <span>5%</span>
+              </div>
+              <div class="rating-bar">
+                <span>2 stars</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 2%;"></div>
+                </div>
+                <span>2%</span>
+              </div>
+              <div class="rating-bar">
+                <span>1 star</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 1%;"></div>
+                </div>
+                <span>1%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Reviews -->
+      <section class="section">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <h2>Customer Reviews</h2>
+          <select id="review-sort" class="form-select" style="width: auto;">
+            <option value="recent">Most Recent</option>
+            <option value="highest">Highest Rated</option>
+            <option value="lowest">Lowest Rated</option>
+          </select>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review Card 1 -->
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Rajesh Kumar" class="review-avatar">
+              <div>
+                <h3>Rajesh Kumar</h3>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-date">2 days ago</p>
+            <h4>Excellent buying experience!</h4>
+            <p>Found my dream car within a week in Mumbai. The process was smooth and transparent. The car was exactly as described, and I got a great deal.</p>
+            <div class="review-car">
+              <p>Purchased: 2020 BMW 3 Series</p>
+            </div>
+          </div>
+
+          <!-- Review Card 2 -->
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Priya Sharma" class="review-avatar">
+              <div>
+                <h3>Priya Sharma</h3>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-date">1 week ago</p>
+            <h4>Quick and easy selling process</h4>
+            <p>Listed my car in Delhi and had multiple interested buyers within days. The platform made it easy to communicate and finalize the sale.</p>
+            <div class="review-car">
+              <p>Sold: 2019 Honda Civic</p>
+            </div>
+          </div>
+
+          <!-- Review Card 3 -->
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Arjun Reddy" class="review-avatar">
+              <div>
+                <h3>Arjun Reddy</h3>
+                <div class="rating-stars">★★★★☆</div>
+              </div>
+            </div>
+            <p class="review-date">2 weeks ago</p>
+            <h4>Good experience overall</h4>
+            <p>The website was easy to navigate and I found what I was looking for in Bangalore. The only minor issue was scheduling the viewing.</p>
+            <div class="review-car">
+              <p>Purchased: 2021 Toyota Camry</p>
+            </div>
+          </div>
+
+          <!-- Review Card 4 -->
+          <div class="review-card">
+            <div class="review-header">
+              <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Ananya Patel" class="review-avatar">
+              <div>
+                <h3>Ananya Patel</h3>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-date">3 weeks ago</p>
+            <h4>Fantastic platform!</h4>
+            <p>As a first-time seller in Chennai, I was nervous about the process. TorqueHub made everything straightforward and secure.</p>
+            <div class="review-car">
+              <p>Sold: 2018 Hyundai Creta</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center" style="margin-top: 2rem;">
+          <button id="load-more" class="btn btn-outline">Load More Reviews</button>
+        </div>
+      </section>
+
+      <!-- Write Review CTA -->
+      <section class="section text-center">
+        <div class="card" style="padding: 2rem;">
+          <h2>Share Your Experience</h2>
+          <p>Had a great experience with TorqueHub? Let others know!</p>
+          <button id="write-review" class="btn btn-primary" style="margin-top: 1rem;">Write a Review</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Review Modal -->
+  <div id="review-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Write a Review</h2>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="review-form">
+          <div class="form-group">
+            <label class="form-label">Rating</label>
+            <div class="rating-input">
+              <input type="radio" name="rating" value="5" id="star5">
+              <label for="star5">★</label>
+              <input type="radio" name="rating" value="4" id="star4">
+              <label for="star4">★</label>
+              <input type="radio" name="rating" value="3" id="star3">
+              <label for="star3">★</label>
+              <input type="radio" name="rating" value="2" id="star2">
+              <label for="star2">★</label>
+              <input type="radio" name="rating" value="1" id="star1">
+              <label for="star1">★</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="review-title" class="form-label">Title</label>
+            <input type="text" id="review-title" class="form-input" required>
+          </div>
+
+          <div class="form-group">
+            <label for="review-text" class="form-label">Review</label>
+            <textarea id="review-text" class="form-textarea" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="car-details" class="form-label">Car Details</label>
+            <input type="text" id="car-details" class="form-input" placeholder="e.g., 2020 Honda Civic" required>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-block">Submit Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/pages/reviews.js"></script>
+</body>
+</html> 

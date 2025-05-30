@@ -1,0 +1,315 @@
+.error-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
+}
+
+/* Road and Lines */
+.road {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: #333;
+  overflow: hidden;
+}
+
+.lines {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    white 0,
+    white 50px,
+    transparent 50px,
+    transparent 100px
+  );
+  animation: moveLines 1s linear infinite;
+}
+
+@keyframes moveLines {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100px); }
+}
+
+/* Car Animation */
+.car {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  animation: carBounce 0.5s ease-in-out infinite alternate;
+  transition: all 0.3s ease-out;
+}
+
+@keyframes carBounce {
+  from { transform: translateX(-50%) translateY(0) rotate(0deg); }
+  to { transform: translateX(-50%) translateY(-5px) rotate(0deg); }
+}
+
+/* Car Body */
+.car-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.car-top-back {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 80px;
+  height: 40px;
+  background: var(--color-primary);
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.back-curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 20px 20px 0 0;
+  transform: perspective(100px) rotateX(5deg);
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.car-gate {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 80px;
+  height: 30px;
+  background: var(--color-primary);
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.car-top-front {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  background: var(--color-primary);
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.front-curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 20px 20px 0 0;
+  transform: perspective(100px) rotateX(5deg);
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.car-window {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(135deg, #87CEEB, #B0E0E6);
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.car-light {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 20px;
+  height: 10px;
+  background: linear-gradient(to bottom, #FFD700, #FFA500);
+  border-radius: 0 0 5px 5px;
+  animation: lightBlink 1s infinite;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+.car-light-right {
+  left: auto;
+  right: 20px;
+}
+
+@keyframes lightBlink {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 0.7; filter: brightness(0.8); }
+}
+
+.car-wheel {
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  background: #333;
+  border-radius: 50%;
+  border: 5px solid #666;
+  animation: wheelRotate 1s linear infinite;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.car-wheel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.car-wheel-right {
+  left: auto;
+  right: 30px;
+}
+
+@keyframes wheelRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Add car details */
+.car-details {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.car-details::before,
+.car-details::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.car-details::before {
+  top: -8px;
+  left: -10px;
+}
+
+.car-details::after {
+  top: -8px;
+  right: -10px;
+}
+
+/* Error Content */
+.error-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.error-title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+.error-subtitle {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.error-actions {
+  margin-bottom: 3rem;
+}
+
+.error-suggestions {
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.suggestion-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.suggestion-links a {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--bg-secondary);
+  transition: all 0.3s ease;
+}
+
+.suggestion-links a:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .car {
+    width: 150px;
+    height: 75px;
+  }
+  
+  .error-title {
+    font-size: 4rem;
+  }
+  
+  .error-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .suggestion-links {
+    flex-direction: column;
+    align-items: center;
+  }
+} 

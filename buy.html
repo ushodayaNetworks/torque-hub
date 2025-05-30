@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Used Cars - TorqueHub</title>
+  <link rel="icon" type="image/svg+xml" href="src/assets/OO7RrC01.svg">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Browse and buy quality used cars on TorqueHub.">
+</head>
+<body>
+  <main class="page-content">
+    <div class="container">
+      <h1>Find Your Perfect Car</h1>
+      <p>Browse our selection of quality used cars</p>
+      
+      <!-- Filter Section -->
+      <div class="filter-form">
+        <h2 class="filter-form-title">Filter Options</h2>
+        <form id="car-filter-form">
+          <div class="filter-form-row">
+            <div class="form-group">
+              <label for="make" class="form-label">Make</label>
+              <select id="make" class="form-select">
+                <option value="All">All Makes</option>
+                <!-- Will be populated by JavaScript -->
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="type" class="form-label">Type</label>
+              <select id="type" class="form-select">
+                <option value="All">All Types</option>
+                <option value="Luxury">Luxury</option>
+                <option value="Sports">Sports</option>
+                <option value="Electric">Electric</option>
+                <option value="Hybrid">Hybrid</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="min-price" class="form-label">Min Price</label>
+              <select id="min-price" class="form-select">
+                <option value="">No Min</option>
+                <option value="10000">$10,000</option>
+                <option value="15000">$15,000</option>
+                <option value="20000">$20,000</option>
+                <option value="25000">$25,000</option>
+                <option value="30000">$30,000</option>
+                <option value="35000">$35,000</option>
+                <option value="40000">$40,000</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="max-price" class="form-label">Max Price</label>
+              <select id="max-price" class="form-select">
+                <option value="">No Max</option>
+                <option value="15000">$15,000</option>
+                <option value="20000">$20,000</option>
+                <option value="25000">$25,000</option>
+                <option value="30000">$30,000</option>
+                <option value="35000">$35,000</option>
+                <option value="40000">$40,000</option>
+                <option value="50000">$50,000</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="filter-form-row">
+            <div class="form-group">
+              <label for="min-year" class="form-label">Min Year</label>
+              <select id="min-year" class="form-select">
+                <option value="">No Min</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="max-year" class="form-label">Max Year</label>
+              <select id="max-year" class="form-select">
+                <option value="">No Max</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="sort-by" class="form-label">Sort By</label>
+              <select id="sort-by" class="form-select">
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="year-desc">Year: Newest First</option>
+                <option value="year-asc">Year: Oldest First</option>
+                <option value="mileage-asc">Mileage: Low to High</option>
+              </select>
+            </div>
+            
+            <div class="form-group" style="display: flex; align-items: flex-end;">
+              <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Results Section -->
+      <div class="results-info">
+        <h2>Available Cars (<span id="results-count">0</span>)</h2>
+        <p>Showing all available vehicles matching your criteria</p>
+      </div>
+      
+      <div class="grid grid-3" id="car-listings">
+        <!-- Will be populated by JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="src/pages/buy.js"></script>
+</body>
+</html>

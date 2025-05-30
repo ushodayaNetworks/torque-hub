@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Car - TorqueHub</title>
+  <link rel="icon" type="image/svg+xml" href="src/assets/OO7RrC01.svg">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Sell your car on TorqueHub - the trusted used car marketplace.">
+</head>
+<body>
+  <main class="page-content">
+    <div class="container">
+      <h1>Sell Your Car</h1>
+      <p>List your vehicle on TorqueHub and connect with thousands of potential buyers</p>
+      
+      <!-- How It Works Section -->
+      <section class="section">
+        <h2 class="section-title">How Selling Works</h2>
+        <p class="section-description">Selling your car on TorqueHub is simple and straightforward</p>
+        
+        <div class="grid grid-3">
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            </div>
+            <h3 class="feature-title">Create a Listing</h3>
+            <p class="feature-description">Fill out the form with details about your car, add photos, and set your price.</p>
+          </div>
+          
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+            </div>
+            <h3 class="feature-title">Connect with Buyers</h3>
+            <p class="feature-description">Receive inquiries from interested buyers and communicate directly through our platform.</p>
+          </div>
+          
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+            </div>
+            <h3 class="feature-title">Complete the Sale</h3>
+            <p class="feature-description">Finalize the transaction with the buyer and transfer ownership of your vehicle.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Seller Form Section -->
+      <section class="section" data-auth-required>
+        <h2 class="section-title">List Your Car</h2>
+        
+        <div class="form-container" style="max-width: 800px;">
+          <form id="sell-car-form">
+            <h3>Car Details</h3>
+            
+            <div class="form-grid form-grid-2">
+              <div class="form-group">
+                <label for="make" class="form-label">Make</label>
+                <input type="text" id="make" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="model" class="form-label">Model</label>
+                <input type="text" id="model" class="form-input" required>
+              </div>
+            </div>
+            
+            <div class="form-grid form-grid-2">
+              <div class="form-group">
+                <label for="year" class="form-label">Year</label>
+                <input type="number" id="year" class="form-input" min="1900" max="2025" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="price" class="form-label">Price ($)</label>
+                <input type="number" id="price" class="form-input" min="1" required>
+              </div>
+            </div>
+            
+            <div class="form-grid form-grid-2">
+              <div class="form-group">
+                <label for="mileage" class="form-label">Mileage</label>
+                <input type="number" id="mileage" class="form-input" min="0" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="color" class="form-label">Color</label>
+                <input type="text" id="color" class="form-input" required>
+              </div>
+            </div>
+            
+            <div class="form-grid form-grid-2">
+              <div class="form-group">
+                <label for="fuel-type" class="form-label">Fuel Type</label>
+                <select id="fuel-type" class="form-select" required>
+                  <option value="">Select Fuel Type</option>
+                  <option value="Gasoline">Gasoline</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Electric">Electric</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="transmission" class="form-label">Transmission</label>
+                <select id="transmission" class="form-select" required>
+                  <option value="">Select Transmission</option>
+                  <option value="Automatic">Automatic</option>
+                  <option value="Manual">Manual</option>
+                  <option value="CVT">CVT</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="description" class="form-label">Description</label>
+              <textarea id="description" class="form-textarea" rows="6" required></textarea>
+            </div>
+            
+            <h3>Features</h3>
+            
+            <div class="form-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 1.5rem;">
+              <div class="form-check">
+                <input type="checkbox" id="feature-ac" class="form-check-input">
+                <label for="feature-ac">Air Conditioning</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-bluetooth" class="form-check-input">
+                <label for="feature-bluetooth">Bluetooth</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-camera" class="form-check-input">
+                <label for="feature-camera">Backup Camera</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-leather" class="form-check-input">
+                <label for="feature-leather">Leather Seats</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-navigation" class="form-check-input">
+                <label for="feature-navigation">Navigation System</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-sunroof" class="form-check-input">
+                <label for="feature-sunroof">Sunroof</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-cruise" class="form-check-input">
+                <label for="feature-cruise">Cruise Control</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-keyless" class="form-check-input">
+                <label for="feature-keyless">Keyless Entry</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="feature-heated" class="form-check-input">
+                <label for="feature-heated">Heated Seats</label>
+              </div>
+            </div>
+            
+            <h3>Photos</h3>
+            
+            <div class="form-group">
+              <label class="form-label">Upload Photos (Maximum 5)</label>
+              <div class="file-upload-container">
+                <input type="file" id="car-photos" multiple accept="image/*" class="file-upload-input">
+                <label for="car-photos" class="file-upload-label">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                  <span>Click to upload photos or drag and drop</span>
+                </label>
+                <div id="photo-preview" class="photo-preview"></div>
+              </div>
+            </div>
+            
+            <h3>Contact Information</h3>
+            
+            <div class="form-grid form-grid-2">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" id="location" class="form-input" placeholder="City, State" required>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg">List My Car</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      <!-- Auth Required Message -->
+      <section class="section text-center" style="display: none;" id="auth-required-message">
+        <div class="card" style="max-width: 600px; margin: 0 auto; padding: 2rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user" style="margin: 0 auto 1rem;"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          
+          <h2>Login Required</h2>
+          <p>You need to be logged in to create a car listing.</p>
+          
+          <div class="btn-group" style="justify-content: center; margin-top: 1.5rem;">
+            <a href="/login.html" class="btn btn-primary">Log In</a>
+            <a href="/signup.html" class="btn btn-outline">Sign Up</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="src/pages/sell.js"></script>
+</body>
+</html>

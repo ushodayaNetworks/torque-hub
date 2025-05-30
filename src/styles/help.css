@@ -1,0 +1,110 @@
+/* Help Center Styles */
+.help-search {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.help-search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.help-search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
+}
+
+/* Help Cards */
+.help-card {
+  display: block;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px var(--shadow-color);
+  border-color: var(--color-primary);
+}
+
+.help-card-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+}
+
+.help-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.help-card p {
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+/* Help Topics */
+.help-topics {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .help-topics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .help-topics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.help-topic-group {
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.help-topic-group h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.help-topic-group ul {
+  list-style: none;
+}
+
+.help-topic-group li {
+  margin-bottom: 0.75rem;
+}
+
+.help-topic-group a {
+  color: var(--text-main);
+  transition: color 0.2s ease;
+}
+
+.help-topic-group a:hover {
+  color: var(--color-primary);
+}

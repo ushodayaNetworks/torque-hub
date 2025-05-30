@@ -1,0 +1,74 @@
+{
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/buy",
+      "destination": "/buy.html"
+    },
+    {
+      "source": "/sell",
+      "destination": "/sell.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/help",
+      "destination": "/help.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/signup.html"
+    },
+    {
+      "source": "/profile",
+      "destination": "/profile.html"
+    },
+    {
+      "source": "/car-details",
+      "destination": "/car-details.html"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/404",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/404.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": false,
+  "cleanUrls": true
+}

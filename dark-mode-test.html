@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Test - TorqueHub</title>
+  <link rel="icon" type="image/svg+xml" href="src/assets/OO7RrC01.svg">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Testing dark mode functionality for TorqueHub.">
+</head>
+<body>
+  <main class="page-content">
+    <div class="container">
+      <h1>Dark Mode Test Page</h1>
+      <p>This page is designed to help test the dark mode functionality and ensure proper appearance across all elements.</p>
+      
+      <div class="dark-mode-test-container">
+        <h2>Theme Controls</h2>
+        
+        <div class="card dark-mode-test-card">
+          <p>Current theme: <span id="current-theme">light</span></p>
+          <button id="toggle-theme-btn" class="dark-mode-test-button">Toggle Theme</button>
+        </div>
+        
+        <h2>Text Appearance</h2>
+        
+        <div class="card dark-mode-test-card">
+          <h1>Heading Level 1</h1>
+          <h2>Heading Level 2</h2>
+          <h3>Heading Level 3</h3>
+          <h4>Heading Level 4</h4>
+          <p>This is standard paragraph text. It should be easily readable in both light and dark modes with proper contrast.</p>
+          <p><strong>This is bold text</strong> and <em>this is italic text</em>.</p>
+          <p><a href="#">This is a link</a> which should be visually distinct.</p>
+        </div>
+        
+        <h2>UI Components</h2>
+        
+        <div class="card dark-mode-test-card">
+          <h3>Buttons</h3>
+          
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <button class="btn btn-accent">Accent Button</button>
+            <button class="btn btn-outline">Outline Button</button>
+            <button class="btn btn-success">Success Button</button>
+            <button class="btn btn-warning">Warning Button</button>
+            <button class="btn btn-danger">Danger Button</button>
+            <button class="btn btn-primary" disabled>Disabled Button</button>
+          </div>
+          
+          <h3>Form Elements</h3>
+          
+          <div class="form-group">
+            <label for="test-input" class="form-label">Text Input</label>
+            <input type="text" id="test-input" class="form-input" placeholder="Enter some text">
+          </div>
+          
+          <div class="form-group">
+            <label for="test-select" class="form-label">Select Dropdown</label>
+            <select id="test-select" class="form-select">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="test-textarea" class="form-label">Textarea</label>
+            <textarea id="test-textarea" class="form-textarea" rows="3" placeholder="Enter multiple lines of text"></textarea>
+          </div>
+          
+          <div class="form-check">
+            <input type="checkbox" id="test-checkbox" class="form-check-input">
+            <label for="test-checkbox">Checkbox Example</label>
+          </div>
+          
+          <h3>Cards & Containers</h3>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+            <div class="card" style="padding: 1rem;">
+              <h4>Regular Card</h4>
+              <p>Standard card with default background.</p>
+            </div>
+            
+            <div class="card" style="padding: 1rem; background-color: var(--bg-secondary);">
+              <h4>Secondary Background</h4>
+              <p>Card with secondary background color.</p>
+            </div>
+            
+            <div class="card" style="padding: 1rem; border-color: var(--color-primary);">
+              <h4>Custom Border</h4>
+              <p>Card with primary color border.</p>
+            </div>
+          </div>
+        </div>
+        
+        <h2>Colors & Contrast</h2>
+        
+        <div class="card dark-mode-test-card">
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem;">
+            <div style="padding: 1rem; background-color: var(--color-primary); color: white; border-radius: 4px;">
+              Primary Color
+            </div>
+            
+            <div style="padding: 1rem; background-color: var(--color-secondary); color: var(--text-main); border-radius: 4px;">
+              Secondary Color
+            </div>
+            
+            <div style="padding: 1rem; background-color: var(--color-accent); color: black; border-radius: 4px;">
+              Accent Color
+            </div>
+            
+            <div style="padding: 1rem; background-color: var(--success-color); color: white; border-radius: 4px;">
+              Success Color
+            </div>
+            
+            <div style="padding: 1rem; background-color: var(--warning-color); color: white; border-radius: 4px;">
+              Warning Color
+            </div>
+            
+            <div style="padding: 1rem; background-color: var(--error-color); color: white; border-radius: 4px;">
+              Error Color
+            </div>
+          </div>
+          
+          <div style="margin-top: 1.5rem;">
+            <h3>Text Colors</h3>
+            <p class="text-primary">This is primary text color</p>
+            <p class="text-accent">This is accent text color</p>
+            <p class="text-success">This is success text color</p>
+            <p class="text-warning">This is warning text color</p>
+            <p class="text-error">This is error text color</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="src/pages/dark-mode-test.js"></script>
+</body>
+</html>

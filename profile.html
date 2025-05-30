@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - TorqueHub</title>
+  <link rel="icon" type="image/svg+xml" href="src/assets/OO7RrC01.svg">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Manage your TorqueHub profile and listings.">
+</head>
+<body>
+  <main class="page-content">
+    <div class="container">
+      <h1>My Profile</h1>
+      
+      <!-- Profile Content for Authenticated Users -->
+      <div class="profile-content" data-auth-required>
+        <div class="grid grid-2" style="gap: 2rem;">
+          <!-- User Info Section -->
+          <div class="card" style="padding: 2rem;">
+            <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+              <div style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; margin-right: 1.5rem;">
+                <span class="user-initial">?</span>
+              </div>
+              <div>
+                <h2 class="user-name">User</h2>
+                <p class="user-email">user@example.com</p>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="display-name" class="form-label">Display Name</label>
+              <input type="text" id="display-name" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="location" class="form-label">Location</label>
+              <input type="text" id="location" class="form-input" placeholder="City, State">
+            </div>
+            
+            <div class="form-actions">
+              <button id="save-profile-btn" class="btn btn-primary">Save Changes</button>
+            </div>
+          </div>
+          
+          <!-- Account Settings Section -->
+          <div class="card" style="padding: 2rem;">
+            <h2>Account Settings</h2>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-input" disabled>
+              <small>To change your email, please contact support.</small>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+              <h3>Preferences</h3>
+              
+              <div class="form-check" style="margin-bottom: 1rem;">
+                <input type="checkbox" id="email-notifications" class="form-check-input" checked>
+                <label for="email-notifications">Receive email notifications</label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" id="dark-mode" class="form-check-input">
+                <label for="dark-mode">Use dark mode</label>
+              </div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+              <h3>Account Actions</h3>
+              
+              <button id="change-password-btn" class="btn btn-outline" style="margin-bottom: 1rem; width: 100%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+                Change Password
+              </button>
+              
+              <button id="logout-btn" class="btn btn-outline" style="width: 100%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+                Log Out
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Saved Cars Section -->
+        <section class="section">
+          <h2>Saved Cars</h2>
+          <p>Cars you've saved for later</p>
+          
+          <div class="grid grid-3" id="saved-cars">
+            <!-- Will be populated by JavaScript -->
+            <div class="no-saved-cars text-center" style="grid-column: 1 / -1; padding: 3rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bookmark" style="margin: 0 auto 1rem; color: var(--text-secondary);"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+              <h3>No Saved Cars</h3>
+              <p>You haven't saved any cars yet.</p>
+              <a href="/buy.html" class="btn btn-primary mt-4">Browse Cars</a>
+            </div>
+          </div>
+        </section>
+        
+        <!-- My Listings Section -->
+        <section class="section">
+          <h2>My Listings</h2>
+          <p>Cars you've listed for sale</p>
+          
+          <div class="no-listings text-center" style="padding: 3rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car" style="margin: 0 auto 1rem; color: var(--text-secondary);"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.4 11.3 1 12.1 1 13v3c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+            <h3>No Listings</h3>
+            <p>You haven't listed any cars for sale yet.</p>
+            <a href="/sell.html" class="btn btn-primary mt-4">Sell Your Car</a>
+          </div>
+        </section>
+      </div>
+      
+      <!-- Auth Required Message -->
+      <div class="auth-required-message" id="auth-required-message" style="display: none;">
+        <div class="card" style="max-width: 500px; margin: 3rem auto; padding: 3rem; text-align: center;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user" style="margin: 0 auto 1.5rem;"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <h2>Login Required</h2>
+          <p>You need to be logged in to view your profile.</p>
+          <div class="btn-group" style="justify-content: center; margin-top: 2rem;">
+            <a href="/login.html" class="btn btn-primary">Log In</a>
+            <a href="/signup.html" class="btn btn-outline">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Change Password Modal -->
+  <div id="password-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Change Password</h2>
+        <button class="modal-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="change-password-form">
+          <div class="form-group">
+            <label for="current-password" class="form-label">Current Password</label>
+            <input type="password" id="current-password" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="new-password" class="form-label">New Password</label>
+            <input type="password" id="new-password" class="form-input" required>
+            <div id="password-error" class="form-error"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="confirm-password" class="form-label">Confirm New Password</label>
+            <input type="password" id="confirm-password" class="form-input" required>
+            <div id="confirm-password-error" class="form-error"></div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-block">Update Password</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/pages/profile.js"></script>
+</body>
+</html>

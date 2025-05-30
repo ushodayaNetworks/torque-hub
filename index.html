@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TorqueHub - Buy & Sell Used Cars</title>
+  <link rel="icon" type="image/svg+xml" href="src/assets/OO7RrC01.svg">
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="TorqueHub - Your trusted marketplace for buying and selling used cars.">
+</head>
+<body>
+  <main class="page-content">
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://media.cars24.com/india/cms/prod/banners/root/2025/02/18/92e4970b-5cd6-4901-b4ce-fc23206b2a57-desktop_banner_new.png'); background-size: cover; background-position: center; height: 600px; display: flex; align-items: center; margin-top: -80px;">
+      <div class="container">
+        <div style="max-width: 650px; color: white; padding: 2rem;">
+          <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #0066cc;">Find Your Perfect Drive</h1>
+          <p style="font-size: 1.25rem; margin-bottom: 2rem; color: white;">TorqueHub makes buying and selling used cars simple, transparent, and trustworthy.</p>
+          <div class="btn-group">
+            <a href="/buy.html" class="btn btn-primary btn-lg">Browse Cars</a>
+            <a href="/sell.html" class="btn btn-outline btn-lg" style="color: white; border-color: white;">Sell Your Car</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Vehicles</h2>
+        <p class="section-description">Discover our handpicked selection of quality used cars</p>
+        
+        <div class="grid grid-3" id="featured-cars">
+          <!-- Will be populated by JavaScript -->
+        </div>
+        
+        <div class="text-center" style="margin-top: 2rem;">
+          <a href="/buy.html" class="btn btn-primary">View All Cars</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <h2 class="section-title">How TorqueHub Works</h2>
+        <p class="section-description">Our simple process makes car buying and selling stress-free</p>
+        
+        <div class="grid grid-3">
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <h3 class="feature-title">Browse</h3>
+            <p class="feature-description">Search our extensive inventory of quality used cars with detailed filters to find your perfect match.</p>
+          </div>
+          
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+            </div>
+            <h3 class="feature-title">Contact</h3>
+            <p class="feature-description">Reach out to sellers directly through our secure platform to ask questions or schedule a viewing.</p>
+          </div>
+          
+          <div class="card feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-key"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+            </div>
+            <h3 class="feature-title">Purchase</h3>
+            <p class="feature-description">Complete your transaction with confidence using our streamlined buying process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-description">Hear from people who found their perfect car on TorqueHub</p>
+        
+        <div class="grid grid-3">
+          <div class="card testimonial-card">
+            <div class="testimonial-content">
+              I found my dream SUV on TorqueHub in just two days! The filtering options made it easy to find exactly what I wanted within my budget.
+            </div>
+            <div class="testimonial-author">Rahul Kumar</div>
+            <div class="testimonial-role">Bought a 2019 Honda CR-V</div>
+          </div>
+          
+          <div class="card testimonial-card">
+            <div class="testimonial-content">
+              As a first-time car buyer, I was nervous about the process. TorqueHub made everything so simple and transparent. Couldn't be happier!
+            </div>
+            <div class="testimonial-author">Arjun reddy</div>
+            <div class="testimonial-role">Bought a 2020 Toyota Corolla</div>
+          </div>
+          
+          <div class="card testimonial-card">
+            <div class="testimonial-content">
+              I sold my BMW through TorqueHub and had multiple interested buyers within a week. The process was smooth and hassle-free.
+            </div>
+            <div class="testimonial-author">Sunitha</div>
+            <div class="testimonial-role">Sold a 2018 BMW 3 Series</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background-color: var(--color-primary); color: white;">
+      <div class="container text-center">
+        <h2 style="color: white;">Ready to Find Your Next Car?</h2>
+        <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 1rem auto 2rem;">
+          Join thousands of satisfied customers who've found their perfect vehicle on TorqueHub.
+        </p>
+        <div class="btn-group">
+          <a href="/signup.html" class="btn btn-accent btn-lg">Sign Up Now</a>
+          <a href="/buy.html" class="btn btn-outline btn-lg" style="color: white; border-color: white;">Browse Cars</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="src/pages/home.js"></script>
+</body>
+</html>
